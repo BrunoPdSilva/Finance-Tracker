@@ -1,0 +1,22 @@
+.signup-form {
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 360px;
+}
+.signup-form label {
+  margin: 30px auto;
+ 
+  display: block;
+}
+.signup-form span {
+  margin-bottom: 6px;
+ 
+  display: block;
+}
+.signup-form input {
+  padding: 8px 6px;
+  width: 100%;
+ 
+  font-size: 1em;
+  color: #777;
+}
