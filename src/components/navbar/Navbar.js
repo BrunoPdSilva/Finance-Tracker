@@ -25,14 +25,16 @@ export function Navbar() {
         )}
 
         {user && (
-          <li>
-            <button onClick={logout} className="btn">
-              Logout
-            </button>
-          </li>
+          <>
+            <li>Hello, {user.displayName}</li>
+            <li>
+              <button onClick={logout} className="btn">
+                Logout
+              </button>
+            </li>
+          </>
         )}
       </ul>
     </nav>
   );
 }
-W
