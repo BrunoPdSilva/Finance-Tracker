@@ -23,6 +23,8 @@ export function AuthContextProvider({ children }) {
   useEffect(() => {
     //Responsável por verificar se já existe um usuário logado.
     const unsub = projectAuth.onAuthStateChanged(user => {
+      /* Essa função irá disparar apenas uma vez. Ela verifica qualquer mudança no Auth e executa toda vez,
+      porém assim que ela disparar 1 vez o unsub() irá desativá-la */
       dispatch({ type: "AUTH_IS_READY", payload: user });
       unsub();
     });

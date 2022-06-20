@@ -6,11 +6,11 @@ import styles from "./Login.module.css";
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  //Recebe a função de login e as propriedades de erro e se está carregando.
   const { login, error, isLoading } = useLogin();
 
   const handleSubmit = e => {
     e.preventDefault();
-
     login(email, password);
   };
 
@@ -24,7 +24,11 @@ export function Login() {
 
       <label>
         <span>password:</span>
-        <input type="password" onChange={e => setPassword(e.target.value)} value={password} />
+        <input
+          type="password"
+          onChange={e => setPassword(e.target.value)}
+          value={password}
+        />
       </label>
 
       {!isLoading && <button className="btn">Login</button>}

@@ -14,15 +14,12 @@ export const useSignup = () => {
     setIsLoading(true);
 
     try {
-      const res = await projectAuth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
-
+      const res = await projectAuth.createUserWithEmailAndPassword(email, password);
+      //Se não obtivermos uma resposta do Firebase então exibimos esse erro:
       if (!res) throw new Error("Couldn't create user");
-
+      //Adicionaf o nome de usuário.
       await res.user.updateProfile({ displayName });
-
+      //Usuário é logado após ter realizado o cadastro.
       dispatch({ type: "LOGIN", payload: res.user });
 
       if (!isCancelled) {

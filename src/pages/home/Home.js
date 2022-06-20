@@ -1,7 +1,14 @@
-import styles from './Home.module.css';
+import { TransactionForm } from "./TransactionForm";
+
+import styles from "./Home.module.css";
 
 export function Home() {
   return (
-    <div>Home Page</div>
-  )
+    <div className={styles.container}>
+      <div className={styles.content}>transacion list</div>
+      <div className={styles.sidebar}>
+        <TransactionForm />
+      </div>
+    </div>
+  );
 }

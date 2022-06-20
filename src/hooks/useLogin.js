@@ -15,7 +15,7 @@ export const useLogin = () => {
 
     try {
       const res = await projectAuth.signInWithEmailAndPassword(email, password);
-
+      //Envia o usuário e a ação para o AuthContext para sabermos que tem um usuário logado.
       dispatch({ type: "LOGIN", payload: res.user });
 
       if (!isCancelled) {

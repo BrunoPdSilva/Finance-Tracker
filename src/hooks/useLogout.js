@@ -32,6 +32,7 @@ export const useLogout = () => {
   };
 
   useEffect(() => {
+    //Se o usuário sair da página antes da promisse ser concluída isso irá impedir o state de ser atualizado.
     return () => setIsCancelled(true);
   }, []);
 

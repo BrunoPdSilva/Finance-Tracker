@@ -7,7 +7,7 @@ export function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
-
+  //Recebe a função de cadastro, erro e carregamento.
   const { signup, error, isLoading } = useSignup();
 
   const handleSubmit = e => {
